@@ -40,7 +40,11 @@ function App() {
     ]
 
     let [allProducts, set_allProducts] = useState(products);
-    let [allcomments, set_allcomments] = useState(comments)
+    let [allcomments, set_allcomments] = useState(comments);
+    let [cart_array, set_cart_array] = useState([]);
+    let [login_status, set_login_status] = useState(false);
+    let [logined_User, set_logined_User] = useState(null);
+    let [favList, set_favList] = useState([]);
 
     return (
         <>
