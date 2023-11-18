@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { foods_database } from "./context";
 
 function App() {
 
@@ -48,7 +49,9 @@ function App() {
 
     return (
         <>
-            <h1>app</h1>
+            <foods_database.Provider value={{ allProducts, allcomments, cart_array, login_status, logined_User, favList }}>
+                <h1>app</h1>
+            </foods_database.Provider>
         </>
     )
 
