@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { foods_database } from "./context";
+import { TestComp } from "./testComp";
 
 function App() {
 
@@ -50,7 +51,7 @@ function App() {
     return (
         <>
             <foods_database.Provider value={{ allProducts, allcomments, cart_array, login_status, logined_User, favList }}>
-                <h1>app</h1>
+                <TestComp />
             </foods_database.Provider>
         </>
     )
