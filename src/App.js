@@ -3,6 +3,7 @@ import { foods_database } from "./context";
 import { TestComp } from "./testComp";
 import { Page2 } from "./page2";
 import { Routes, Route } from "react-router-dom";
+import { Page3 } from "./page3";
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<TestComp />} />
                     <Route path="/page2" element={<Page2 />} />
+                    <Route path="/:foodID" element={<Page3 />} />
                 </Routes>
             </foods_database.Provider>
         </>
