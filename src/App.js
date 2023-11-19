@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { foods_database } from "./context";
 import { TestComp } from "./testComp";
+import { Routes,Route } from "react-router-dom";
 
 function App() {
 
@@ -50,9 +51,12 @@ function App() {
 
     return (
         <>
-            <foods_database.Provider value={{ allProducts, allcomments, cart_array, login_status, logined_User, favList }}>
-                <TestComp />
-            </foods_database.Provider>
+            {/* <foods_database.Provider value={{ allProducts, allcomments, cart_array, login_status, logined_User, favList }}> */}
+                <Routes>
+                    <Route path="/" element={<h1>reza</h1>}/>
+                    <Route path="/home" element={<h1>home</h1>}/>                  
+                </Routes>
+            {/* </foods_database.Provider> */}
         </>
     )
 
