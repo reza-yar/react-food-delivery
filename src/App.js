@@ -57,7 +57,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<TestComp />} />
                     <Route path="/page2" element={<Page2 />} />
-                    <Route path="/:foodID" element={<Page3 />} />
+                    <Route path="/:op" element={<Page3 />} />
+                    
                 </Routes>
             </foods_database.Provider>
         </>

@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { foods_database } from "./context";
+import { useParams } from "react-router-dom";
 
 function Page3() {
     let foods = useContext(foods_database);
-    console.log(foods.allProducts);
+    let params = useParams();
+    console.log(params);
     return (
         <>
             <h1>page3</h1>
@@ -12,7 +14,7 @@ function Page3() {
             <hr />
             {foods.allProducts.map(a =>
                 <>
-                    <a href="#">{a.id}</a>
+                    <Link to={`/${a.id}`}>{a.id}</Link>
                     <hr />
                 </>
             )}
