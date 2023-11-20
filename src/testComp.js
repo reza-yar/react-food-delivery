@@ -12,7 +12,7 @@ function TestComp() {
             <p> {all.allProducts[0].id}</p>
             
             <Link to='/page2'>page2</Link>
-            <Link to="/page3/:foodID">page3</Link>
+            <Link to="/:foodID">page3</Link>
         </>
     )
 }
