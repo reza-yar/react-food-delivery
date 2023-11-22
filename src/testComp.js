@@ -8,10 +8,11 @@ function TestComp() {
     
     return (
         <>
-            <h1>testComp</h1>
-            <p> {all.allProducts[0].id}</p>
+            <h1>main page</h1>
+            
             
             <Link to='/page2'>page2</Link>
+            <hr />
             <Link to="/page3">page3</Link>
         </>
     )
