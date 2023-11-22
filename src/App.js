@@ -4,6 +4,7 @@ import { TestComp } from "./testComp";
 import { Page2 } from "./page2";
 import { Routes, Route } from "react-router-dom";
 import { Page3 } from "./page3";
+import { NotFound } from "./NotFound";
 
 function App() {
 
@@ -57,8 +58,8 @@ function App() {
                 <Routes>
                     <Route path="/" element={<TestComp />} />
                     <Route path="/page2" element={<Page2 />} />
-                    <Route path="/:op" element={<Page3 />} />
-                    
+                    <Route path="/page3" element={<Page3 />} />
+                    <Route path='*' element={<NotFound />} />
                 </Routes>
             </foods_database.Provider>
         </>
