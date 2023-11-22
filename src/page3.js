@@ -10,25 +10,8 @@ function Page3() {
     console.log(params);
     return (
         <>
-            {params.op == ':200' ?
-                (<>
-                    <Navigate to='/' />
-                </>
-                ) : (
-                    <>
-                        <h1>page3</h1>
-                        <Link to="/">go to home</Link>
-                        <hr />
-                        {foods.allProducts.map(a =>
-                            <>
-                                <Link to={`/${a.id}`}>{a.id}</Link>
-                                <hr />
-                            </>
-                        )}
-                    </>
-                )
-            }
-
+            <h1>page3</h1>
+            <Link to='/'>go to home</Link>
         </>
     )
 }

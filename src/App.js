@@ -58,7 +58,9 @@ function App() {
                 <Routes>
                     <Route path="/" element={<TestComp />} />
                     <Route path="/page2" element={<Page2 />} />
-                    <Route path="/page3" element={<Page3 />} />
+                    <Route path="/page3/*" element={<Page3 />}/>
+                        
+                    
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </foods_database.Provider>
