@@ -1,4 +1,4 @@
-
+import './App.css'
 import { useState } from "react";
 import { foods_database } from "./context";
 import { MainPage } from "./mainPage/mainPage";
@@ -55,16 +55,23 @@ function App() {
 
     return (
         <>
-            <foods_database.Provider value={{ allProducts, allcomments, cart_array, login_status, logined_User, favList }}>
-                <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/page2" element={<Page2 />} />
-                    <Route path="/page3" element={<Page3 />} />
+            <div className='main_container'>
+                <foods_database.Provider value={{ allProducts, allcomments, cart_array, login_status, logined_User, favList }}>
+                    <Routes>
+                        <Route path="/*" element={<MainPage />} />
+                        <Route path="/page2" element={<Page2 />} />
 
+                        <Route path="/page3/*" element={<Page3 />} >
+                            <Route path='setting' element={<h1>setting</h1>}/>
+                        </Route>
 
-                    <Route path='*' element={<NotFound />} />
-                </Routes>
-            </foods_database.Provider>
+                        
+
+                        <Route path='*' element={<NotFound />} />
+                    </Routes>
+                </foods_database.Provider>
+            </div>
+
         </>
     )
 
