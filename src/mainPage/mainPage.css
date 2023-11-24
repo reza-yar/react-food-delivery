@@ -1,7 +1,13 @@
+@font-face {
+    font-family: "customFont";   /*Can be any text*/
+    src: local("anj"),
+      url("../fonts/anj.ttf") format("truetype");
+  }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "customFont";
 }
 .mainPage_container{
     border:5px solid red ;

@@ -2,8 +2,11 @@ import "./navbar.css";
 
 function Navbar() {
     return (
-        <header>رستوران دلپذیر</header>
+        <header>
+            <h1>رستوران دلپذیر</h1>
+            
+        </header>
     )
 }
 
-export {Navbar}
+export { Navbar }
