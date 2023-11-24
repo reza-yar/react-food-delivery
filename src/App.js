@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { foods_database } from "./context";
-import { TestComp } from "./testComp";
+import { MainPage } from "./mainPage/mainPage";
 import { Page2 } from "./page2";
 import { Routes, Route } from "react-router-dom";
 import { Page3 } from "./page3";
@@ -56,11 +56,11 @@ function App() {
         <>
             <foods_database.Provider value={{ allProducts, allcomments, cart_array, login_status, logined_User, favList }}>
                 <Routes>
-                    <Route path="/" element={<TestComp />} />
+                    <Route path="/" element={<MainPage />} />
                     <Route path="/page2" element={<Page2 />} />
-                    <Route path="/page3" element={<Page3 />}/>
-                        
-                    
+                    <Route path="/page3" element={<Page3 />} />
+
+
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </foods_database.Provider>
